@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800 font-sans antialiased;
+  }
+}
+
+@theme {
+  --color-primary: #7C3AED;
+  --color-primary-light: #F5F3FF;
+  --color-primary-dark: #6D28D9;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-800: #1E293B;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+}
+
+@utility btn-primary {
+  @apply bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-primary-dark transition-all duration-300 active:scale-95 shadow-md hover:shadow-lg;
+}
+
+@utility btn-outline {
+  @apply border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary-light transition-all duration-300 active:scale-95;
+}
+
+@utility card-classic {
+  @apply bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500;
+}
+
+@utility badge-classic {
+  @apply px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}
